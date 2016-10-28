@@ -1,7 +1,7 @@
 (function () {
 'use strict';
 
-angular.module('LunchCheckApp', [])
+angular.module('LunchCheck', [])
 .controller('LunchCheckController', LunchCheckController);
 
 
