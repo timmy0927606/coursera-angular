@@ -1,0 +1,8 @@
+<h3>Title: {{ list.myTitle }}</h3>
+<ol>
+  <li ng-repeat="item in list.items">
+    <mark>Name: </mark> {{ item.name }} <mark>Category:</mark> {{ item.short_name}} <mark>Description:</mark> {{ item.description}} 
+    <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+<div class="empty" ng-if="list.isEmpty()">Nothing found</div>
