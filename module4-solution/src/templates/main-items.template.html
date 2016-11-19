@@ -1,0 +1,14 @@
+<!-- <div id="list" ng-controller='ItemDataController as itemList'> -->
+  <a ui-sref="home">Home</a> &lt; <span>List</span>
+  <!-- categoryName set when moving from categories state view to items state view  -->
+  <div ng-if="itemList.categoryName">
+    <h3>Menu items for {{itemList.categoryName}}</h3>
+  </div>
+
+  <!-- categoryName not set when reloading the page with url -->
+  <div ng-if="!itemList.categoryName">
+    <h3>Menu items</h3>
+  </div>
+
+  <items items="itemList.items"></items>
+<!-- </div> -->
