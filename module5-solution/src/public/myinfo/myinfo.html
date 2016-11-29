@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>My Info</h1>
+
+    <div id="info" ng-if="myinfo.isValid">
+
+      <div>
+        First name: {{ myinfo.user.firstname}} <br>
+        Last name: {{ myinfo.user.lastname}} <br>
+        Email: {{ myinfo.user.email}} <br>
+        Phone: {{ myinfo.user.phone }} <br>
+        Favorite menu item:
+      </div>
+
+      <div class="menu-item-tile col-md-6">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="menu-item-photo">
+              <div>{{ myinfo.user.menu_item.short_name}}</div>
+              <img class="img-responsive" width="250" height="150" ng-src="{{myinfo.basePath}}/images/{{myinfo.user.menu_item.short_name}}.jpg" alt="{{$myinfo.user.menu_item.name}}">
+            </div>
+          </div>
+          <div class="menu-item-description col-sm-7">
+            <h3 class="menu-item-title">{{myinfo.user.menu_item.name}}</h3>
+            <p class="menu-item-details">{{myinfo.user.menu_item.description}}</p>
+          </div>
+        </div>
+        <hr class="visible-xs">
+      </div>
+
+    </div>
+
+    <div id="info" ng-if="!myinfo.isValid">
+      Not Signed Up Yet. <a ui-sref="public.signup"><span>Sign up</span></a> Now!
+    </div>
+
+</div>
